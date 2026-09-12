@@ -1,0 +1,46 @@
+Take item names and prices for 5 products.
+Store
+item names in one list
+prices in another list
+Display
+total bill amount
+highest priced item
+lowest priced item
+
+----------------------------------------------
+
+names = []
+prices = []
+
+for i in range(5):
+  name = input()
+  price = int(input())
+
+  names.append(name)
+  prices.append(price)
+
+print(names)
+print(prices)
+
+total_bill = sum(prices)
+
+print(total_bill)
+
+mx_product = ""
+mx = prices[0]
+
+mn_product = ""
+mn = prices[0]
+
+for i in range(5):
+  if prices[i] > mx:
+    mx = prices[i]
+    mx_product = names[i]
+
+  elif prices[i] <mn:
+    mn = prices[i]
+    mn_product = names[i]
+
+print(mx_product,mx)
+
+print(mn_product,mn)
